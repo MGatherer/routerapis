@@ -1,6 +1,6 @@
-#Huawei E5180 API
+#Huawei E5186 API
 
-This project will let you interface with your Huawei E5180 Cube router easily.  
+This project will let you interface with your Huawei E5186 Cube router easily.  
 This router is deployed by 3 DK, as "home routers" for their 4G connections. 
 You can get it for free if you order a 100GB or above package from 3.
 (Link where I bought mine: [https://www.3.dk/mobiler-tablets/modems-routere/huawei/huawei-e5180-cube](https://www.3.dk/mobiler-tablets/modems-routere/huawei/huawei-e5180-cube))  
@@ -30,7 +30,7 @@ Also, the blue LED is quite fun to play with. You can tap the top, to turn it on
 
 ##Documentation
 How do I use this library?
-Simply include the composer autoloader into your project after installation, as you are used to, and proceed to make a Router object. Set the address of your router and login. Now every other function listed here SHOULD work, at least on E5180. I can't talk about any other routers compliance.
+Simply include the composer autoloader into your project after installation, as you are used to, and proceed to make a Router object. Set the address of your router and login. Now every other function listed here SHOULD work, at least on E5186. I can't talk about any other routers compliance.
 
 ```
 <?php
@@ -160,7 +160,7 @@ I don't promise that these will work like advertised or at all, just have fun. I
 
 
 ##Huawei Router API Error codes
-Sometimes if you are experimenting with the Huawei API and trying to talk with it, you will get a random error code back. This sucks, to say it politely, as there is absolutely no information on what is going wrong. Therefore, I've gotten hold of this list of error codes for the Huawei API, which I know is true for the E5180 and probably other devices too. So if you just googled "Huawei Router API Error" or something like that, congratulations, today is your lucky day.
+Sometimes if you are experimenting with the Huawei API and trying to talk with it, you will get a random error code back. This sucks, to say it politely, as there is absolutely no information on what is going wrong. Therefore, I've gotten hold of this list of error codes for the Huawei API, which I know is true for the E5186 and probably other devices too. So if you just googled "Huawei Router API Error" or something like that, congratulations, today is your lucky day.
 Please note that not all codes are in here, but most of them are.
 
 ```
