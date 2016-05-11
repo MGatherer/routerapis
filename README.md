@@ -152,6 +152,9 @@ Have a look inside the Router.php class to find out what methods you can use, it
  - getInbox($page = 1, $count = 20, $unreadPreferred = false) defaults are fine for most tinkering. page/count for pagination.
  - deleteSms($index) provide with SMS index for deleting. Returns true if not found also.
  - sendSms($receiver, $message) Pretty self explanatory. Might return true and not send anyway. There is an API to query for send status, but I didn't worry about it.
+ - reboot() Restart the router.
+ - backup() Create a backup of the router at http://192.168.1.1/nvram.bak (must be login).
+ - shutdown() Shutdown the router.
 
 I don't promise that these will work like advertised or at all, just have fun. It should get you started.
 
