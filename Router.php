@@ -309,11 +309,13 @@ class Router
 		* Note how it wants the length of the content also.
 		* It ALSO wants the current date/time wtf? Oh well.. 
 		*/
+		$receiver_array = explode(';', $receiver);
 		$sendSmsXml = '<?xml version="1.0" encoding="UTF-8"?><request>
 			<Index>-1</Index>
-			<Phones>
-				<Phone>'.$receiver.'</Phone>
-			</Phones>
+			<Phones>';
+		foreach ($receiver_array as $to)
+			$sendSmsXml .= '<Phone>'.$to.'</Phone>';
+		$sendSmsXml .= '</Phones>
 			<Sca/>
 			<Content>'.$message.'</Content>
 			<Length>'.strlen($message).'</Length>
@@ -324,8 +326,9 @@ class Router
 		';
 		$xml = $this->http->postXml($this->getUrl('api/sms/send-sms'), $sendSmsXml);
 		$obj = new \SimpleXMLElement($xml);
+				
 		//Simple check if login is OK.
-		return ((string)$obj == 'OK');
+		return ((string)$obj == 'OK');	
 	}
 
 	/**
